@@ -30,7 +30,7 @@
   
 <div class="form-group">
 <label>Email Body</label>
-<textarea class="form-control" rows="10" cols="60"></textarea>
+<textarea class="form-control" rows="10" cols="60" id="txtarea1"></textarea>
 </div>
   
 </div>
@@ -44,7 +44,7 @@
 </div>
 
 <div class="col-md-7">
-<textarea class="form-control" rows="20" cols="60"></textarea>
+<textarea class="form-control" rows="20" cols="60" id="txtarea2"></textarea>
 </div>
 </div>
 </div>
@@ -60,10 +60,10 @@ $(document).ready(()=>{
     else
       cust_name='Mr. '+lname;
     
-    let value=`Dear`+cust_name+`,\n\n
+    let value=`Dear `+cust_name+`,\n\n
                Greetings from Samsung!!!Apology for inconvenience.\n\n`+
                 $('#txtarea1').val()+`\n\n
-                The reference no of your email is`+$('#ref').val()+`.\n\n 
+                The reference no of your email is `+$('#ref').val()+`.\n\n 
                    Warm Regards,\n
                    Raghav Anand\n
                   Samsung Technical Support Team\n
@@ -72,7 +72,7 @@ $(document).ready(()=>{
                   access and download the materials located on www.samsung.com/in only for personal, non-commercial use.\n                  
                `;   
     
-    console.log(value);
+    $('#txtarea2').val(value);
   });
 
 });
