@@ -36,7 +36,7 @@
 </div>
 
 <div class="card-footer">
-<button class="btn btn-success">Submit</button>
+<button class="btn btn-success" id="btn">Submit</button>
 </div>
 </form>
 
@@ -51,10 +51,10 @@
   
 <script>
 $(document).ready(()=>{  
-  $('button').on("click",(e)=>{
+  $('#btn').on("click",(e)=>{
     e.preventDefault();
     let cust_name='';
-    let lname=$('lname').val();
+    let lname=$('#lname').val();
     if(lname==='')
      cust_name= 'Customer'; 
     else
@@ -62,8 +62,8 @@ $(document).ready(()=>{
     
     let value=`Dear`+cust_name+`,\n\n
                Greetings from Samsung!!!Apology for inconvenience.\n\n`+
-                $('txtarea1').val()+`\n\n
-                The reference no of your email is`+$('ref').val()+`.\n\n 
+                $('#txtarea1').val()+`\n\n
+                The reference no of your email is`+$('#ref').val()+`.\n\n 
                    Warm Regards,\n
                    Raghav Anand\n
                   Samsung Technical Support Team\n
