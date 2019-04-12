@@ -51,7 +51,8 @@
   
 <script>
 $(document).ready(()=>{  
-  $('button').on("click",()=>{
+  $('button').on("click",(e)=>{
+    e.preventDefault();
     let cust_name='';
     let lname=$('lname').val();
     if(lname==='')
